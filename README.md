@@ -1,5 +1,8 @@
 ## Reference
 Please go to the references folder to see all the images that shows the App.
+## Deployed Version
+
+https://pokemon-react-app-theta.vercel.app/
 
 # Getting Started with Pokemon Test Frontend App
 
