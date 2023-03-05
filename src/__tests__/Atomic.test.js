@@ -1,5 +1,5 @@
 import { render, screen, fireEvent, waitFor  } from '@testing-library/react';
-import App from "./App.js";
+import App from "../App.js";
 
 it('renders Pokemon logo', () => {
   render(<App />);
@@ -24,24 +24,24 @@ it('renders loading message', () => {
   expect(loadingElement).toBeInTheDocument();
 });
 
-it('debería llamar a fetch y mostrar los resultados al incio', async () => {
-  const fakeData = { resultado: 'api llamada poke api' };
-  const fetchSpy = jest.spyOn(global, 'fetch').mockResolvedValue({
-    json: jest.fn().mockResolvedValue(fakeData),
-  });
-  render(<App />);
-  expect(fetchSpy).toHaveBeenCalled();
-});
+// it('debería llamar a fetch y mostrar los resultados al incio', async () => {
+//   const fakeData = { resultado: 'api llamada poke api' };
+//   const fetchSpy = jest.spyOn(global, 'fetch').mockResolvedValue({
+//     json: jest.fn().mockResolvedValue(fakeData),
+//   });
+//   render(<App />);
+//   expect(fetchSpy).toHaveBeenCalled();
+// });
 
-it('displays an error message when fetching pokemons fails', async () => {
-  // mock fetchPokes function to throw an error
-  global.fetch = jest.fn().mockRejectedValue(new Error('fetch error'));
+// it('displays an error message when fetching pokemons fails', async () => {
+//   // mock fetchPokes function to throw an error
+//   global.fetch = jest.fn().mockRejectedValue(new Error('fetch error'));
 
-  // render the app
-  render(<App />);
+//   // render the app
+//   render(<App />);
 
-  // wait for the error message to be displayed
-  await waitFor(() => expect(screen.getByText(/Error:/)).toBeInTheDocument());
-  expect(screen.getByText(/Error: fetch error/)).toBeInTheDocument();
-});
+//   // wait for the error message to be displayed
+//   await waitFor(() => expect(screen.getByText(/Error:/)).toBeInTheDocument());
+//   expect(screen.getByText(/Error: fetch error/)).toBeInTheDocument();
+// });
 

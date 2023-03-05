@@ -1,3 +1,54 @@
+# UPDATES
+### Main Feedback to be corrected
+> "Probably the tests don't have a good coverage" Totally agree, I corrected that, i am keeping the last tests in a file called `Atomic.test.js` i created a new file that test almost everything probably we are close to the 95% of coverage in this file `App.test.js`, i mocked the Poke API and i did test for almost every part on the App, feel free to run `npm test -- --verbose`, also test now has its own folder `/__tests__`. 😀
+
+> This is a list of all tets: 
+Pokemon App Behaviur
+- App should display everything correctly before interaction
+    -  √ should display pokemon logo (461 ms)
+    -  √ should display search input id/name poke (63 ms)
+    -  √ should display selector abilities (58 ms)
+    -  √ should display total number of pokes (219 ms)
+    -  √ should display page size selector (59 ms)
+    -  √ should display page change selector (51 ms)
+    -  √ should display container list pokes (55 ms)
+    -  √ should display Loading  when no loading (58 ms)
+    -  √ should display previus button paggination  (94 ms)
+    -  √ should display container next button paggination  (88 ms)
+    -  √ should display labels paggination below  (79 ms)
+    App should show all Pokes fisrt view
+    -  √ should all pokes in the first view/sized (80 ms)
+    -  √ should show the correct size of pokes by page (83 ms)
+    -  √ should show the fisrt page number (77 ms)
+    - √ should show the correct total number of pokes (80 ms)
+    -  √ should show image by pokemon (73 ms)
+    -  √ should show id by pokemon (76 ms)
+    -  √ should show name by pokemon (70 ms)
+    -  √ should show a button to click for detailing (74 ms)
+- Paggination
+    -  √ should show Page 1 of  (76 ms)
+    -  √ should show correct number of pages   (76 ms)
+    -  √ when click next should go to next page   (149 ms)
+    -  √ when click previus should go to previus page   (210 ms)
+    -  √ when select size page pokes need to change according that (128 ms)
+    -  √ previus button should be disable in fisrt page (82 ms)
+    -  √ When select last page should go to loading and not show error (134 ms)
+    should Filter changing input text
+    -  √ when search change filter by id (672 ms)
+    -  √ when search change filter by name (481 ms)
+    -  √ when search change filter and this fit some pokes (82 ms)
+- when error api
+    -  √ When API hit an error (37 ms)
+- should show detailed pokemon when click
+    -  √ when select a pokemon should see the detail (94 ms)
+    -  √ when select a pokemon should display Height, Weight, Experience and Type (96 ms)
+    -  √ when select a pokemon should display the correct pokemon (86 ms)
+
+> "Better to put outside the styles" Totally agree, i created a new folder for styled componets, and now the App.js file looks pretty clean, go to `/components/styledComponents` to check, also `PokeSmallCard` component was created as you asked.😀
+
+> "We can improve the git history" Nothing to discuss here, i did not image to use a repository in this project and made a deployment, it was my bad sorry, for the future i am going to take that advice. 😀
+
+> Probably many things that we can improve here feel free to ping me and i will try to make this better.🤓
 ## Reference
 Please go to the references folder to see all the images that shows the App.
 ## Deployed Version
