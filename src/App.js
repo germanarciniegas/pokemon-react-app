@@ -43,20 +43,23 @@ function App() {
   useEffect(() => {
     setLoading(true);
     const offset = (page - 1) * limit;
-    if(page && limit) fetchPokemons(offset, limit);
+    if(page && limit) {
+      fetchPokemons(offset, limit);
+    }
   }, [page, limit]);
 
   useEffect(() => {
-    //Debouncing 
+    //Debouncing
+      const offset = (page - 1) * limit;
       const getDataFiltered = setTimeout(() => {
-      fetchPokemons();
+      fetchPokemons(offset, limit);
     }, 300)
     return () => clearTimeout(getDataFiltered)
   }, [selectedFilter, filterAbilities])
 
   const detailPokemons = async (response) => {
-    response.map((item)=>{ 
-      axios
+    response.map((item) => {
+      return axios
         .get(item.url)
         .then(response => {
           const {data} = response;

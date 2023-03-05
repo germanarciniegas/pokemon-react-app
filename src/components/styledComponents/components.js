@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-export {DetailPoke, List, Pagination, PokemonImage, PokemonName};
 
 const List = styled.ul`
   list-style: none;
@@ -165,4 +164,5 @@ const DetailPoke = styled.section`
     border-radius: 16px;
   }
 `;
+export {DetailPoke, List, Pagination, PokemonImage, PokemonName};
 
